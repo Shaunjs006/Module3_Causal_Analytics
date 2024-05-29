@@ -19,9 +19,9 @@ if (any(installed_packages == FALSE)) {
 # foldername <- "C:\\Users\\n.neumann" 
 
 ## Add your path to the data here
-foldername <- "C:\\Users\\nicon" 
+# foldername <- "C:\\Users\\nicon" 
 
-setwd(paste0(foldername,"\\OneDrive\\2024_Causal_Analytics_TAs\\2024_Causal_Class 1"))
+# setwd(paste0(foldername,"\\OneDrive\\2024_Causal_Analytics_TAs\\2024_Causal_Class 1"))
 
 
 #################### load libraries (install first if necessary)
