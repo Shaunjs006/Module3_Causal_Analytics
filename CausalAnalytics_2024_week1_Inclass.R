@@ -124,7 +124,14 @@ qqline(log(football_managers_seasons$points))
 
 
 # Try your own model - decide which variables to include
+model_e1.fit <- lm(points ~. + poly(points, 2) + poly(goals, 2), data=football_managers_seasons)
+summary(model_e1.fit)
 
+
+
+
+
+######
 # Example:
 ols.fit1 <- lm(points ~ points_lastseason, data=football_managers_seasons)
 summary(ols.fit1)
