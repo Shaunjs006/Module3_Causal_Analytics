@@ -85,3 +85,37 @@ fit=lm(dispatch~attended+factor(grade), data=firemen.data)
 summary(fit)
 ```
 
+Question G
+
+```{r}
+data2 = read.csv('fire_building.csv', header = TRUE)
+firemen.data <- cbind(firemen.data,data2[2])
+```
+
+```{r}
+fit=lm(damage~attended + dispatch + trucks + factor(grade) + building.size, data=firemen.data)
+summary(fit)
+AIC(fit)
+```
+
+question h
+
+```{r}
+z.multiple=summary(lm(damage~scale(attended)+scale(dispatch)+scale(trucks)+scale(grade)+scale(building.size),data=firemen.data))$coefficients[2:6,]
+barplot(z.multiple[,1],beside=T, legend=c("z-scores"))
+```
+
+question I
+
+```{r}
+fit=lm(log(damage)~attended + dispatch  + factor(grade), data = firemen.data)
+summary(fit)
+```
+
+```{r}
+fit=lm(damage~attended + dispatch  + factor(grade), data = firemen.data)
+summary(fit)
+```
+
+
+
