@@ -1,0 +1,87 @@
+---
+title: "CA w2 workshop"
+author: "Sennan Cai"
+date: "2024-06-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(dplyr)
+```
+
+Question 1
+
+```{r}
+firemen.data <- read.csv(file='firemen.csv', header=TRUE)
+
+round(cor(firemen.data %>% select_if(is.numeric)),2)
+
+
+```
+a)
+..
+
+b)
+0.99 and 0.85 between dispatch and damage, attended
+
+
+Question 2
+
+```{r}
+fit = lm(damage ~ attended, data = firemen.data)
+summary(fit)
+```
+a)
+
+positive coefficient and p value is less than 2*10^-16, which is statistically significant
+
+b)
+
+it make theoretically sense because worth the incident we have we need more firemen 
+and worth the incident will potentially cause more damage.
+
+Question c
+
+```{r}
+fit = lm(damage ~ attended + grade, data = firemen.data)
+summary(fit)
+```
+
+a)
+15.555
+b)
+0.8126
+c)
+```{r}
+fit = lm(damage ~ attended + factor(grade), data = firemen.data)
+summary(fit)
+```
+
+0.864
+
+F
+```{r}
+fit=lm(damage~attended + dispatch  + factor(grade), data = firemen.data)
+summary(fit)
+```
+
+d)
+
+```{r}
+fit = lm(damage ~ dispatch + factor(grade),data=firemen.data)
+summary(fit)
+```
+
+coefficient is positive 
+
+e)
+
+```{r}
+fit=lm(dispatch~attended+factor(grade), data=firemen.data)
+summary(fit)
+```
+
