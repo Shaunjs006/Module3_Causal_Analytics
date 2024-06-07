@@ -113,7 +113,7 @@ summary(fit)
 ```
 
 ```{r}
-fit=lm(damage~attended + dispatch  + factor(grade), data = firemen.data)
+fit=lm(damage~attended + dispatch  + factor(grade) + factor(grade)*dispatch, data = firemen.data)
 summary(fit)
 ```
 
