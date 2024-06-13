@@ -9,22 +9,66 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+A
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+a)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+library(tidyverse)
+library(lmtest)
+library(pwr2)
+library(readr)
+jobtraining <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/w3/jobtraining.csv")
 ```
 
-## Including Plots
+```{r}
+# a
+table(jobtraining$treatment)
 
-You can also embed plots, for example:
+# b checking randomness 
+jobtraining %>% group_by(treatment,married) %>%
+  summarise(cnt = n()) %>%
+  mutate(prop = round(cnt / sum(cnt), 3)) %>% 
+  arrange(desc(prop))
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+jobtraining %>% group_by(treatment,unemployed) %>%
+  summarise(cnt = n()) %>%
+  mutate(prop = round(cnt / sum(cnt), 3)) %>% 
+  arrange(desc(prop))
+
+jobtraining %>% group_by(treatment,age) %>%
+  summarise(cnt = n()) %>%
+  mutate(prop = round(cnt / sum(cnt), 3)) %>% 
+  arrange(desc(prop))
+
+jobtraining %>% group_by(treatment) %>% summarize(mean(age))
+
+# c
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+B
+
+```{r}
+# a
+hist(jobtraining$earnings)
+hist(log(jobtraining$earnings)) # looks much normal
+
+# b
+t.test(log(earnings+1))
+
+
+
+```
+
+# d
+
+```{r}
+library(readr)
+online_store_promo <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/w3/online_store_promo.csv")
+```
+
+```{r}
+table(online_store_promo$Promotion, online_store_promo$Newsletter)
+```
+
