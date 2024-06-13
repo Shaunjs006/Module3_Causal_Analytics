@@ -72,3 +72,189 @@ online_store_promo <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analyt
 table(online_store_promo$Promotion, online_store_promo$Newsletter)
 ```
 
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(lmtest)
+library(effectsize)
+library(pwr2)
+######################################################################################################################################################################
+#######################################        Exercise D: Week1 Football Manager Analysis revisited                    ##############################################
+######################################################################################################################################################################
+
+
+######################################################################################################################################################################
+#########################################################           Data preparation        ##########################################################################
+
+# read.csv accent problem, using read_csv
+football_managers_merged <-  read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/w3/football_managers_all.csv")
+
+# Encode naming columns
+Encoding(football_managers_merged$manager_name)
+football_managers_merged$manager_name <-  iconv(football_managers_merged$manager_name, to='UTF-8')
+
+# Replace missing values NA from points last season with 0 (these are teams that got promoted to the premier league)
+football_managers_merged$points_lastseason <-  ifelse(is.na(football_managers_merged$points_lastseason),0,football_managers_merged$points_lastseason)
+
+
+# Reminder: Below is how we formatted date columns in week 1
+#football_managers_merged$date_from <-  as.Date(football_managers_merged$date_from, format = "%d-%b-%y")
+#football_managers_merged$date_until <- as.Date(football_managers_merged$date_until, format = "%d-%b-%y")
+#football_managers_merged$date <- as.Date(football_managers_merged$date, format = "%d/%m/%Y")
+
+# We now use lubridate to 
+football_managers_merged$date_from <- dmy(football_managers_merged$date_from)
+football_managers_merged$date_until <- dmy(football_managers_merged$date_until)
+football_managers_merged$date <- dmy(football_managers_merged$date)
+
+# generate duration variable (it's measured in seconds)
+football_managers_merged$duration <- as.duration(interval(football_managers_merged$date_from, football_managers_merged$date_until))
+
+# Reminder:it's important to create a workable manager_name variable for the aggregate data set
+# We need to check whether there were multiple managers in one season and create a unique variable for each team
+# Adding count variable 
+football_managers_merged <- football_managers_merged %>% add_count(manager_name, team, season)   
+
+# add new name if mixed team
+football_managers_merged$manager_name_clean <- ifelse(
+  football_managers_merged$n < 38,
+  paste0("Multiple manager ", football_managers_merged$team),
+  football_managers_merged$manager_name
+)
+
+
+######################################################################################################################################################################
+
+## Aggregate data to season level
+football_managers_seasons <- group_by(football_managers_merged, season, team) %>% 
+  reframe(
+    points = sum(points),
+    goals = sum(goals),
+    duration= mean(duration),
+    goals_opponent = sum(goals_opponent),
+    points_lastseason = mean(points_lastseason),
+    team = first(team),
+    manager_name = first(manager_name_clean),
+    caretaker = mean(caretaker)
+  ) %>% 
+  as.data.frame()                                        
+
+
+######################################################################################################################################################################
+### D Now we start running models
+
+# a) 
+ols.fit.a <- lm(points ~ manager_name + team + points_lastseason, data = football_managers_seasons)
+summary(ols.fit.a)
+
+## points_lastseason  now not significant anymore! (and note the sign)
+
+# Adjust diagram (remove direct link of points_lastseason) and extract the top 10 performing managers
+ols.fit.a.adjusted <- lm(points ~ manager_name + team, data = football_managers_seasons)
+summary(ols.fit.a.adjusted)
+
+ols.fit.a.adjusted.summary <- summary(ols.fit.a.adjusted)
+coefficients <- as.data.frame(ols.fit.a.adjusted.summary$coefficients[,1], stringsAsFactors = FALSE)
+colnames(coefficients) <- c("Estimate")
+coefficients$Coefficient <- rownames(coefficients)
+
+# Filter out the coefficients related to manager_name
+manager_coefficients <- coefficients[grep("manager_name", coefficients$Coefficient), ]
+
+# Sort by the estimates in descending order
+manager_coefficients <- manager_coefficients[order(manager_coefficients$Estimate, decreasing = TRUE), ]
+
+manager_coefficients[1:10,]
+# manager_nameAlex Ferguson   69.07826   manager_nameAlex Ferguson
+
+
+
+
+# b) Fit the OLS model without Team
+ols.fit.b <- lm(points ~ manager_name + points_lastseason, data = football_managers_seasons)  
+summary(ols.fit.b)
+
+## points_lastseason- now significant and sign as expected
+
+
+# d) Let's run aov
+# two-way ANOVA
+two.way.anova.fit.points <- aov(points ~ manager_name + team, data = football_managers_seasons)
+summary(two.way.anova.fit.points)
+
+# one-way ANOVA
+anova.fit.points <- aov(points ~ manager_name, data = football_managers_seasons)
+summary(anova.fit.points)
+
+
+# e) 
+# step 1 - aov (one-way ANOVA)
+anova.fit.duration <- aov(duration ~ manager_name, data = football_managers_seasons)
+summary(anova.fit.duration)
+
+# step 2 - linear regression with mediator Team
+ols.fit.e <- lm(points ~ team + manager_name + duration , data = football_managers_seasons)  
+summary(ols.fit.e)  # duration is not significant -> no arrow to points
+
+
+# step 3 - linear regression omitting mediator Team
+# let's omit team and see whether there is an association with points (we also add points last season again)
+ols.fit.e.omit.team <- lm(points ~ manager_name +  duration , data = football_managers_seasons)  
+summary(ols.fit.e.omit.team)
+
+
+
+
+# f) We need to standardise the two predictors, e.g. using scale()
+ols.fit.z <- lm(points ~ manager_name + scale(points_lastseason) + scale(duration), data = football_managers_seasons)  
+summary(ols.fit.z)
+
+
+# g) final model - no mediators but controlling for team performance in previous season
+ols.fit.final <- lm(points ~ manager_name + points_lastseason, data = football_managers_seasons)  
+summary(ols.fit.final)
+
+# Normality - histogram
+hist(ols.fit.final$residuals)
+
+# qqplot as an alternative to a histogram
+qqnorm(ols.fit.final$residuals)  
+qqline(ols.fit.final$residuals)
+
+# Homoscedasticity check using Breusch-Pagan test
+bptest(ols.fit.final) # good
+
+
+# Extract the top 10 performing managers
+summary_ols.final <- summary(ols.fit.final)
+
+coefficients.final <- as.data.frame(summary_ols.final$coefficients, stringsAsFactors = FALSE)
+colnames(coefficients.final) <- c("Estimate","Std. Error", "t value","p value")
+coefficients.final$Coefficient <- rownames(coefficients.final)
+
+# Filter out the coefficients related to manager_name
+manager_coefficients.final <- coefficients.final[grep("manager_name", coefficients.final$Coefficient), ]
+
+# Sort by the coefficient estimates in descending order
+manager_coefficients.final <- manager_coefficients.final[order(manager_coefficients.final$Estimate, decreasing = TRUE), ]
+
+manager_coefficients.final[1:10,]
+# top: manager_namePep Guardiola   39.08417 
+
+
+# h)
+#Adding the coefficients
+anova.final.model <- aov(points ~ manager_name + points_lastseason, data = football_managers_seasons)
+summary(anova.final.model)
+
+# Variance explained based on partial eta squared
+eta_squared(anova.final.model)
+# Manager explains 86% of the variance
+
+# note - partial cohen's f (based on partial eta squared) is the default
+# We usually are interested in the partial effect sizes (controlling for other variables)
+cohens_f(anova.final.model)
+
+```
+
