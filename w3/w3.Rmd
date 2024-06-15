@@ -255,6 +255,5 @@ eta_squared(anova.final.model)
 # note - partial cohen's f (based on partial eta squared) is the default
 # We usually are interested in the partial effect sizes (controlling for other variables)
 cohens_f(anova.final.model)
-
 ```
 
