@@ -1,0 +1,34 @@
+---
+title: "Casual Analysis mid exam preparatin"
+author: "Sennan Cai"
+date: "2024-06-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+practice
+
+```{r}
+library(readr)
+Wine15_2stores <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/mid term/Wine15_2stores.csv")
+```
+```{r}
+Wine15_2stores
+```
+
+
+
+
+
+actual exam
+
+```{r}
+library(readr)
+newspaper_ads <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/mid term/newspaper_ads.csv")
+View(newspaper_ads)
+```
+
+
