@@ -16,7 +16,22 @@ library(readr)
 Wine15_2stores <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/mid term/Wine15_2stores.csv")
 ```
 ```{r}
-Wine15_2stores
+model<-lm(Price~I(BottleShop-1),data=Wine15_2stores)
+summary(model)
+```
+or
+
+```{r}
+# Example data
+group1 <- subset(Wine15_2stores, BottleShop == 1)
+group2 <- subset(Wine15_2stores, BottleShop == 2)
+
+# Perform Welch's t-test
+t_test_result <- t.test(group1$Price, group2$Price, var.equal = FALSE)
+t_test_result
+# # Extract the p-value
+# p_value <- t_test_result$p.value
+# p_value
 ```
 
 
