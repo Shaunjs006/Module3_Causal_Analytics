@@ -1,0 +1,391 @@
+id,price,area,stars,scarce_room,distance,rating,type
+1,81,Hernals,4,1,2.7,4.4,Apartment
+2,81,Hernals,4,0,1.7,3.9,Hotel
+3,85,Alsergrund,4,0,1.4,3.7,Hotel
+4,83,Alsergrund,3,0,1.7,4,Hotel
+5,82,Alsergrund,4,1,1.2,3.9,Hotel
+6,229,Alsergrund,5,1,0.9,4.8,Apartment
+7,103,Alsergrund,4,1,0.9,3.9,Hotel
+8,150,Alsergrund,4,0,1,4.6,Hotel
+9,80,Alsergrund,2,1,0.7,3.5,Hotel
+10,60,Alsergrund,4,1,1.1,4.1,Hotel
+11,128,Alsergrund,4,0,0.8,4,Hotel
+12,100,Alsergrund,4,1,1,4.5,Apartment
+13,143,Alsergrund,2,1,1.2,3.7,Apartment
+14,85,Alsergrund,4,0,1.7,4.1,Hotel
+15,77,Alsergrund,3,0,0.9,3.7,Hotel
+16,78,Alsergrund,3,1,0.8,3.9,Hotel
+17,78,Alsergrund,3,1,0.9,4,Hotel
+18,158,Donaustadt,3,1,3.4,4.8,Apartment
+19,77,Donaustadt,3,1,4.2,3.9,Hotel
+20,77,Donaustadt,3,0,3.9,2.7,Hotel
+21,95,Donaustadt,4,0,3.6,4.3,Hotel
+22,156,Donaustadt,3,1,3.8,3,Apartment
+23,145,Donaustadt,3,1,3.5,3.5,Bed and breakfast
+24,208,Donaustadt,4,1,2.9,4.1,Hotel
+25,87,Donaustadt,3,1,3.4,3.7,Hotel
+26,131,Favoriten,2,1,2.3,3.5,Apartment
+27,54,Favoriten,3,0,2,3.5,Hotel
+28,139,Favoriten,2,1,2.4,3,Apartment
+29,184,Favoriten,2,1,2.8,3.2,Apartment
+30,127,Favoriten,3,1,2.9,1,Apartment
+31,99,Favoriten,3.5,0,1.7,4.4,Hotel
+32,75,Favoriten,3.5,0,1.7,4.4,Hotel
+33,76,Favoriten,3,0,2.1,4.4,Hotel
+34,130,Favoriten,2,1,2.5,3,Apartment
+35,91,Favoriten,4,0,1.9,4.5,Hotel
+36,135,Favoriten,2,1,2.4,3,Apartment
+37,56,Favoriten,2,1,2,2,Hotel
+38,27,Favoriten,2,1,2.7,3.7,Hostel
+39,88,Favoriten,3,1,2.3,3,Apartment
+40,133,Favoriten,2,1,2.5,3.5,Apartment
+41,33,Favoriten,2,0,1.8,3.4,Hotel
+42,71,Favoriten,4,0,1.7,4,Hotel
+43,90,Favoriten,3.5,1,2.7,3.5,Apartment
+44,84,Favoriten,4,1,1.9,4.1,Apartment
+45,63,Favoriten,3,0,2.3,4.3,Guest House
+46,113,Graben,3,0,0.2,4.4,Hotel
+47,218,Graben,4.5,1,0.1,4.1,Apartment
+48,299,Graben,5,1,0.1,4.5,Hotel
+49,156,Innere Stadt,3,1,0.3,4.5,Hotel
+50,513,Innere Stadt,5,1,0.3,4.8,Hotel
+51,133,Innere Stadt,4,1,0.3,4.3,Hotel
+52,123,Innere Stadt,4,1,0.5,4.1,Hotel
+53,219,Innere Stadt,4,1,0.3,4.5,Hotel
+54,152,Innere Stadt,4,0,0.3,4.3,Hotel
+55,115,Innere Stadt,4,1,0.1,4.3,Hotel
+56,806,Innere Stadt,5,0,0.3,4.5,Hotel
+57,138,Innere Stadt,4,0,0.2,4.5,Hotel
+58,95,Innere Stadt,3,1,0.4,3.7,Apartment
+59,146,Innere Stadt,4,0,0.1,4.4,Hotel
+60,103,Innere Stadt,3,0,0.7,4,Pension
+61,98,Innere Stadt,3,1,0.5,3.7,Hotel
+62,121,Innere Stadt,3.5,1,0.3,4.5,Hotel
+63,149,Innere Stadt,4,0,0.2,4,Hotel
+64,120,Innere Stadt,3,0,0.3,3.9,Hotel
+65,157,Innere Stadt,3,1,0.4,4.4,Hotel
+66,261,Innere Stadt,5,1,0.3,4.8,Hotel
+67,145,Innere Stadt,3.5,1,0.7,4.1,Apartment
+68,275,Innere Stadt,4,1,0.2,4.3,Apartment
+69,112,Innere Stadt,4,0,0.2,4,Hotel
+70,138,Innere Stadt,4,0,0.3,4.3,Hotel
+71,84,Innere Stadt,3,1,0.4,4,Pension
+72,199,Innere Stadt,4.5,0,0.3,4.5,Hotel
+73,203,Innere Stadt,5,0,0.3,4.4,Hotel
+74,168,Innere Stadt,3.5,1,0.2,4,Apartment
+75,544,Innere Stadt,5,0,0.5,4.8,Hotel
+76,252,Innere Stadt,5,0,0.5,4.6,Hotel
+77,323,Innere Stadt,5,0,0.5,4.5,Hotel
+78,158,Innere Stadt,3,1,0.3,4.3,Hotel
+79,156,Innere Stadt,3.5,1,0.2,4,Apartment
+80,218,Innere Stadt,4,1,0.2,4.6,Hotel
+81,218,Innere Stadt,4,0,0.1,4.5,Hotel
+82,135,Innere Stadt,3,0,0.3,3.9,Hotel
+83,219,Innere Stadt,2,1,0.6,4,Apartment
+84,179,Innere Stadt,4,1,0.5,4.4,Hotel
+85,157,Innere Stadt,4,0,0.7,4.5,Hotel
+86,146,Innere Stadt,4,1,0.3,4.5,Hotel
+87,200,Innere Stadt,5,0,0.4,4.3,Hotel
+88,157,Innere Stadt,4,1,0.1,4.1,Hotel
+89,108,Innere Stadt,3,1,0.3,3.5,Hotel
+90,127,Innere Stadt,4,0,0.8,4,Hotel
+91,114,Innere Stadt,3,1,0.7,3,Guest House
+92,163,Innere Stadt,4,1,0.4,4.1,Hotel
+93,116,Innere Stadt,4,1,0.2,4.5,Apart-hotel
+94,226,Innere Stadt,5,0,0.5,4.3,Hotel
+95,231,Innere Stadt,4,0,0.1,4.4,Hotel
+96,116,Innere Stadt,4,1,0.4,4.4,Hotel
+97,76,Innere Stadt,3,1,0.4,3.7,Guest House
+98,135,Innere Stadt,3.5,1,0.3,1,Apartment
+99,184,Innere Stadt,5,0,0.6,4.5,Hotel
+100,384,Innere Stadt,5,0,0.6,4.8,Hotel
+101,166,Innere Stadt,4,1,0.6,4.3,Hotel
+102,187,Innere Stadt,5,0,0.5,4.1,Hotel
+103,371,Innere Stadt,5,0,0.5,4.6,Hotel
+104,156,Innere Stadt,4,1,0.1,4.4,Pension
+105,169,Innere Stadt,4,1,0.3,4.5,Hotel
+106,266,Innere Stadt,5,1,0.3,4.5,Apartment
+107,131,Innere Stadt,3,1,0.1,3.9,Pension
+108,168,Innere Stadt,4,1,0.2,4.6,Apartment
+109,242,Innere Stadt,4,0,0,4.8,Hotel
+110,223,Innere Stadt,4,1,0.5,3.5,Hotel
+111,149,Innere Stadt,4,1,0.3,4.4,Hotel
+112,114,Innere Stadt,4,0,0.5,4,Hotel
+113,253,Innere Stadt,3.5,1,0.1,2,Apartment
+114,163,Innere Stadt,4,1,0.3,4.4,Apart-hotel
+115,116,Innere Stadt,3,1,0.4,4.1,Pension
+116,139,Innere Stadt,4,1,0.2,3.5,Hotel
+117,91,Innere Stadt,3.5,1,0.2,3.2,Apartment
+118,79,Josefstadt,3,1,1.4,3.5,Hotel
+119,66,Josefstadt,4,1,1.1,3.7,Pension
+120,100,Josefstadt,3,1,1.1,3,Apartment
+121,75,Josefstadt,2.5,1,1.3,3,Pension
+122,73,Josefstadt,2,1,1.2,3.5,Pension
+123,127,Josefstadt,5,1,0.8,4.1,Hotel
+124,110,Josefstadt,3,0,0.9,4.1,Hotel
+125,88,Josefstadt,3,1,0.9,4.4,Hotel
+126,59,Josefstadt,3,0,1.2,3.7,Pension
+127,59,Josefstadt,3,1,1.6,3.9,Hotel
+128,119,Josefstadt,4,0,0.9,4,Hotel
+129,152,Josefstadt,4,0,0.9,4.3,Hotel
+130,102,Josefstadt,4,0,1,4,Hotel
+131,363,Josefstadt,3.5,1,1.5,5,Apartment
+132,54,Josefstadt,3,1,1.1,3.2,Hotel
+133,101,Josefstadt,3,1,1.1,4,Apartment
+134,75,Josefstadt,2,1,0.9,4,Hotel
+135,73,Josefstadt,2,1,0.9,3.9,Hotel
+136,94,Josefstadt,3,1,1,4.1,Hotel
+137,64,Josefstadt,4,1,1.1,3.5,Pension
+138,81,Josefstadt,3.5,0,1,3.7,Apart-hotel
+139,162,Josefstadt,3,1,1.6,4,Apartment
+140,115,Josefstadt,4,0,0.9,4.5,Hotel
+141,101,Josefstadt,4,1,1.2,4.4,Apartment
+142,68,Josefstadt,3,1,0.9,3.7,Hotel
+143,354,Kaerntner Strasse,5,0,0.4,4.5,Hotel
+144,153,Kaerntner Strasse,4,1,0.2,4.1,Hotel
+145,202,Kaerntner Strasse,5,1,0.2,4.3,Hotel
+146,169,Kaerntner Strasse,4,1,0.3,4.1,Hotel
+147,182,Kaerntner Strasse,4,0,0.5,4.5,Hotel
+148,138,Kaerntner Strasse,4,1,0.2,4.1,Pension
+149,527,Kaerntner Strasse,5,1,0.4,4.8,Hotel
+150,142,Kaerntner Strasse,4,0,0.1,4.4,Hotel
+151,110,Landstrasse,4,0,0.6,4.3,Hotel
+152,82,Landstrasse,3.5,1,1.9,4.1,Apartment
+153,91,Landstrasse,3.5,1,0.9,2.5,Apartment
+154,83,Landstrasse,3.5,1,1.7,4.4,Apartment
+155,95,Landstrasse,4.5,1,1.8,4,Apartment
+156,131,Landstrasse,3,0,1.4,3.7,Apartment
+157,162,Landstrasse,4,1,1.1,4.8,Bed and breakfast
+158,177,Landstrasse,5,0,0.5,4.3,Hotel
+159,122,Landstrasse,2,1,1.5,4,Apartment
+160,79,Landstrasse,3,1,1.6,2,Apartment
+161,82,Landstrasse,4,0,1.4,4,Hotel
+162,82,Landstrasse,4,1,1.7,4.1,Hotel
+163,66,Landstrasse,3,0,1.8,3.9,Hotel
+164,169,Landstrasse,4,0,0.8,4.1,Hotel
+165,59,Landstrasse,3,1,0.8,3.7,Guest House
+166,109,Landstrasse,4,0,1.5,4.1,Hotel
+167,104,Landstrasse,3,1,0.7,3.4,Hotel
+168,145,Landstrasse,3.5,0,0.9,4.3,Hotel
+169,58,Landstrasse,3.5,1,1.4,2,Apartment
+170,85,Landstrasse,3,1,0.8,3.5,Hotel
+171,184,Landstrasse,4,1,0.7,4.5,Apartment
+172,137,Landstrasse,4.5,0,1,4.1,Hotel
+173,116,Landstrasse,4.5,0,1.1,4.5,Hotel
+174,157,Landstrasse,2,0,1.1,3.7,Apartment
+175,110,Landstrasse,3,1,1.3,3.7,Hotel
+176,134,Landstrasse,4,1,0.6,4.3,Hotel
+177,79,Landstrasse,4,1,1.3,3.7,Hotel
+178,143,Landstrasse,3,1,1.4,4.5,Apartment
+179,132,Landstrasse,4,0,1,4.1,Hotel
+180,68,Landstrasse,4,1,1.3,4,Apartment
+181,128,Leopoldstadt,4,0,0.6,4.1,Hotel
+182,99,Leopoldstadt,3,0,1.5,4.5,Hotel
+183,149,Leopoldstadt,2,1,0.9,2.2,Apartment
+184,86,Leopoldstadt,4,0,1.8,4,Hotel
+185,155,Leopoldstadt,3,0,1.9,4.1,Apartment
+186,63,Leopoldstadt,3,1,1,3.4,Hotel
+187,157,Leopoldstadt,2,0,0.6,3.7,Apartment
+188,134,Leopoldstadt,3.5,1,0.6,4,Hotel
+189,141,Leopoldstadt,5,1,1.7,4.3,Apartment
+190,79,Leopoldstadt,3,0,0.9,3.7,Hotel
+191,138,Leopoldstadt,4,0,0.5,4,Hotel
+192,113,Leopoldstadt,4,1,1,4.5,Hotel
+193,171,Leopoldstadt,3,1,1.5,3.5,Apartment
+194,56,Leopoldstadt,2,0,1.5,3.5,Hotel
+195,84,Leopoldstadt,3,0,1.5,3.9,Hotel
+196,72,Leopoldstadt,2,0,1.1,4,Hotel
+197,587,Leopoldstadt,5,1,0.7,1,Hotel
+198,68,Leopoldstadt,3,1,0.9,4,Hotel
+199,102,Leopoldstadt,3.5,0,1.5,3.9,Hotel
+200,96,Leopoldstadt,3,1,1.5,3.4,Apartment
+201,81,Leopoldstadt,1,0,0.9,3.7,Hotel
+202,82,Leopoldstadt,3,0,1.6,4.1,Hotel
+203,66,Leopoldstadt,3,1,1.1,4,Hotel
+204,87,Leopoldstadt,3,1,0.8,3.9,Apartment
+205,240,Leopoldstadt,5,0,0.4,4.5,Hotel
+206,113,Leopoldstadt,3,0,0.8,4.5,Hotel
+207,106,Leopoldstadt,3,1,1,4.5,Hotel
+208,89,Leopoldstadt,3,0,1.6,4.1,Hotel
+209,61,Leopoldstadt,2,0,0.9,4,Hotel
+210,92,Leopoldstadt,3.5,1,0.8,4.5,Apartment
+211,106,Leopoldstadt,4,1,0.8,4.1,Hotel
+212,100,Leopoldstadt,4,1,0.8,4,Hotel
+213,75,Leopoldstadt,3,0,0.7,4.1,Hotel
+214,84,Leopoldstadt,3,1,0.8,2.2,Hotel
+215,151,Leopoldstadt,4,0,0.5,4.6,Hotel
+216,87,Leopoldstadt,3,0,0.9,3.5,Hotel
+217,117,Leopoldstadt,4,1,0.5,4.4,Hotel
+218,120,Leopoldstadt,4,0,1.9,4.5,Hotel
+219,68,Leopoldstadt,2.5,0,0.9,3.9,Hotel
+220,383,Margareten,3,1,1.9,4,Hotel
+221,160,Margareten,4,1,1.6,4.3,Apartment
+222,111,Margareten,4.5,0,2,4.5,Hotel
+223,174,Margareten,4,0,1.5,4.3,Hotel
+224,63,Margareten,3,0,2,3.5,Hotel
+225,73,Margareten,3,1,1.4,4.3,Apartment
+226,100,Margareten,3.5,0,1.5,4.5,Hotel
+227,86,Margareten,4,0,1.4,3.9,Hotel
+228,67,Margareten,3,0,1.8,4,Hotel
+229,129,Margareten,4,0,1.3,4.1,Hotel
+230,80,Margareten,3,1,1.9,4.1,Apartment
+231,131,Margareten,2,1,1.9,3.2,Apartment
+232,150,Margareten,3.5,1,1.6,5,Apartment
+233,159,Mariahilf,3,1,1.1,4.6,Apartment
+234,86,Mariahilf,3,1,1.3,4,Hotel
+235,96,Mariahilf,2,1,0.9,3.7,Hotel
+236,131,Mariahilf,4,0,0.7,4.1,Hotel
+237,103,Mariahilf,4,1,2,4.1,Apartment
+238,85,Mariahilf,2,0,1,4,Hotel
+239,80,Mariahilf,3,0,1.4,3.9,Hotel
+240,93,Mariahilf,4,1,1.1,4,Hotel
+241,81,Mariahilf,3.5,1,1.8,4.5,Apartment
+242,77,Mariahilf,3,0,1.9,4,Hotel
+243,140,Mariahilf,4,1,0.8,4.8,Hotel
+244,99,Mariahilf,4,1,1,4,Hotel
+245,75,Mariahilf,4,1,1.1,4.1,Pension
+246,105,Mariahilf,4,0,1.4,4.4,Hotel
+247,100,Mariahilf,3.5,0,1.7,4.5,Hotel
+248,89,Mariahilf,3,1,1,3.7,Pension
+249,82,Mariahilf,3,0,1.1,3.9,Hotel
+250,82,Mariahilf,4,0,1.8,3.9,Hotel
+251,134,Mariahilf,2,1,1.6,3.7,Apartment
+252,87,Mariahilf,4,0,1.9,3.5,Hotel
+253,100,Mariahilf,4,0,1.6,3.7,Hotel
+254,84,Mariahilf,4,0,1.6,4.3,Hotel
+255,52,Mariahilf,2,1,0.9,3.7,Hotel
+256,98,Neubau,4,1,0.8,3.7,Hotel
+257,333,Neubau,5,0,0.7,4.9,Hotel
+258,99,Neubau,3,0,1.8,4.1,Hotel
+259,77,Neubau,3,1,1.5,4,Bed and breakfast
+260,160,Neubau,3.5,1,1.6,4.6,Apartment
+261,160,Neubau,3.5,1,1.6,5,Apartment
+262,76,Neubau,3,0,1.6,3.5,Hotel
+263,89,Neubau,3,1,1.6,4.4,Bed and breakfast
+264,113,Neubau,3,1,0.8,3.7,Hotel
+265,110,Neubau,4,0,0.9,4.4,Hotel
+266,184,Neubau,4,0,1,4.6,Hotel
+267,33,Neubau,2,0,1.7,3.2,Hotel
+268,1012,Neubau,3,1,1,4.3,Hotel
+269,99,Neubau,4,0,1.7,4.1,Hotel
+270,122,Neubau,3,1,0.8,3.9,Hotel
+271,122,Neubau,4,0,1.7,4.3,Hotel
+272,105,Neubau,4,0,1.7,4,Hotel
+273,98,Neubau,4,1,1.7,5,Apartment
+274,109,Neubau,4,0,1.4,4,Hotel
+275,105,Neubau,3,1,1.2,4.1,Hotel
+276,133,Ottakring,2,1,2,3.2,Apartment
+277,133,Ottakring,2.5,1,2.3,4.3,Apartment
+278,52,Ottakring,3,0,3.1,3.5,Hotel
+279,134,Ottakring,2,1,1.8,3.7,Apartment
+280,80,Ottakring,4,0,4.1,4,Hotel
+281,91,Rudolfsheim-Funfhaus,2,1,2.9,4,Hotel
+282,47,Rudolfsheim-Funfhaus,2,1,1.9,3.7,Hostel
+283,70,Rudolfsheim-Funfhaus,4,0,1.8,3.9,Hotel
+284,88,Rudolfsheim-Funfhaus,3.5,1,2.3,2.2,Apartment
+285,136,Rudolfsheim-Funfhaus,3,0,1.9,4.5,Hotel
+286,80,Rudolfsheim-Funfhaus,3,1,2.1,4.1,Hotel
+287,131,Rudolfsheim-Funfhaus,2,1,2.3,3.9,Apartment
+288,81,Rudolfsheim-Funfhaus,3,1,2.4,4.1,Hotel
+289,133,Rudolfsheim-Funfhaus,2,0,2.5,3.7,Apartment
+290,66,Rudolfsheim-Funfhaus,4,1,3.6,3.7,Hotel
+291,77,Rudolfsheim-Funfhaus,3,0,2.8,4,Hotel
+292,121,Rudolfsheim-Funfhaus,3,1,1.8,4.5,Apartment
+293,69,Rudolfsheim-Funfhaus,4,0,2.1,3.7,Hotel
+294,83,Rudolfsheim-Funfhaus,3,0,2.1,4.1,Hotel
+295,53,Rudolfsheim-Funfhaus,2,1,1.9,4.1,Hostel
+296,133,Rudolfsheim-Funfhaus,3.5,1,2.7,4,Apartment
+297,77,Rudolfsheim-Funfhaus,4,0,1.8,3.9,Hotel
+298,48,Rudolfsheim-Funfhaus,2,1,2,4.5,Hostel
+299,142,Rudolfsheim-Funfhaus,4.5,0,2.9,4.3,Hotel
+300,121,Rudolfsheim-Funfhaus,4,0,1.7,3.9,Hotel
+301,68,Schonbrunn,3,1,3.6,3.5,Hotel
+302,63,Schonbrunn,3,0,2,3.7,Hotel
+303,101,Schonbrunn,3,0,2.1,4.5,Hotel
+304,75,Schonbrunn,4,0,2.6,3.7,Hotel
+305,156,Schonbrunn,4,0,3.6,4.3,Hotel
+306,56,Schonbrunn,3,0,3.7,3.5,Hotel
+307,82,Schonbrunn,3.5,0,2.4,4.5,Hotel
+308,82,Schonbrunn,4,0,2.6,4.4,Hotel
+309,106,Schonbrunn,3,1,4.1,3.7,Hotel
+310,85,Schonbrunn,3,1,3.1,2.7,Hotel
+311,83,Schonbrunn,3.5,1,2.6,4.5,Hotel
+312,92,Schonbrunn,4,0,2.9,4.1,Hotel
+313,169,Schonbrunn,3,1,2.3,4.3,Apartment
+314,77,Schonbrunn,3,1,2.7,3.5,Guest House
+315,92,Schwechat,3,0,11,4.3,Hotel
+316,166,Schwechat,4,0,11,4,Hotel
+317,137,Schwechat,4,1,7.7,3.7,Hotel
+318,99,Schwechat,3,0,7.7,3.7,Hotel
+319,140,Schwechat,4,1,7.8,3.5,Hotel
+320,80,Schwechat,3,0,6.3,3.2,Hotel
+321,91,Schwechat,3,0,6.7,3.5,Hotel
+322,130,Vienna,2,1,2.6,4,Apartment
+323,110,Vienna,3,1,4.7,4.3,Pension
+324,117,Vienna,4,0,2,4,Hotel
+325,106,Vienna,4,1,5.4,4.1,Pension
+326,66,Vienna,3,0,3.9,3.7,Hotel
+327,266,Vienna,5,1,3.5,4.6,Apartment
+328,58,Vienna,2,0,2.4,3.5,Hotel
+329,81,Vienna,3.5,1,3.7,4.1,Hotel
+330,109,Vienna,4,0,3.5,4,Hotel
+331,114,Vienna,4.5,0,2.3,4.3,Hotel
+332,125,Vienna,3.5,0,2.3,4.4,Apart-hotel
+333,69,Vienna,3,1,1.7,3.7,Guest House
+334,97,Vienna,4,0,3.1,4,Hotel
+335,74,Vienna,4,1,4.8,3.9,Hotel
+336,69,Vienna,4,0,3.7,3.7,Hotel
+337,83,Vienna,4,0,3.9,4,Hotel
+338,50,Vienna,3,0,3.9,3.9,Hotel
+339,130,Vienna,2,0,4.7,3.2,Apartment
+340,134,Vienna,3,1,3.7,3,Apartment
+341,134,Vienna,3,1,6.9,4,Apartment
+342,77,Vienna,3,1,3.7,4,Hotel
+343,102,Vienna,3,0,5.3,4,Hotel
+344,56,Vienna,3.5,1,2.5,3.2,Apartment
+345,185,Vienna,3,1,2.7,3,Apartment
+346,130,Vienna,3,1,6.6,4.4,Hotel
+347,78,Vienna,3,0,3.2,4.3,Hotel
+348,76,Vienna,3,1,3.3,3.7,Hotel
+349,68,Vienna,4,1,4.5,4,Hotel
+350,116,Vienna,4,0,2.7,4,Hotel
+351,172,Vienna,4,1,2.2,4.1,Hotel
+352,80,Vienna,2,1,5.2,3.2,Hostel
+353,87,Vienna,3,1,2.4,4,Hotel
+354,90,Vienna,3,1,4.6,3,Hotel
+355,100,Vienna,3.5,1,2.7,4.4,Hotel
+356,173,Vienna,2,1,3.1,3.2,Apartment
+357,92,Vienna,2,1,2.5,3.2,Pension
+358,133,Vienna,2,1,2.6,3.7,Apartment
+359,134,Vienna,3.5,1,5.1,3.2,Apartment
+360,209,Vienna,3,1,5.2,4,Apartment
+361,114,Vienna,4,1,1.4,4.9,Apartment
+362,89,Voesendorf,4,0,7,3.5,Hotel
+363,92,Voesendorf,4,0,7.1,3.7,Hotel
+364,84,Wahring,3,0,1.9,4.4,Hotel
+365,124,Wahring,2,1,1.8,3.5,Apartment
+366,185,Wahring,4,1,2.1,4.4,Hotel
+367,85,Wahring,4,0,3,4,Hotel
+368,133,Wahring,2,1,1.9,4,Apartment
+369,110,Wieden,3.5,0,1.6,4.5,Hotel
+370,86,Wieden,3,0,1.6,4.3,Hotel
+371,118,Wieden,4,0,1,4.1,Hotel
+372,126,Wieden,3.5,1,0.9,4.5,Hotel
+373,92,Wieden,3,0,1.3,4.3,Hotel
+374,197,Wieden,4,1,0.8,4.8,Hotel
+375,39,Wieden,2.5,1,1.3,3.5,Guest House
+376,135,Wieden,4,0,1.2,4.5,Hotel
+377,125,Wieden,4,0,1.2,4.4,Hotel
+378,67,Wieden,2,0,1,3.4,Hostel
+379,134,Wieden,4,0,0.8,4.5,Hotel
+380,91,Wieden,3,1,0.9,3.5,Hotel
+381,110,Wieden,3,0,0.8,3.9,Hotel
+382,84,Wieden,3.5,1,0.9,5,Apartment
+383,100,Wieden,3,1,1.2,4,Hotel
+384,95,Wieden,4,1,1.5,4.1,Hotel
+385,73,Wieden,3,1,1.5,3.4,Hotel
+386,109,Wieden,3,1,1.5,5,Apartment
+387,185,Wieden,5,0,0.8,4.3,Hotel
+388,100,Wieden,4,1,1,4.4,Hotel
+389,58,Wieden,3,0,1.4,3.2,Hotel
+390,110,Wieden,3.5,1,0.7,4,Apartment

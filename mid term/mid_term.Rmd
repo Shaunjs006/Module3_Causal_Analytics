@@ -43,7 +43,39 @@ actual exam
 ```{r}
 library(readr)
 newspaper_ads <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/mid term/newspaper_ads.csv")
-View(newspaper_ads)
+newspaper_ads$
 ```
 
+```{r}
+# Frequency distribution of inquiries by day and section
+frequency_distribution <- newspaper_ads %>%
+  group_by(day, section) %>%
+  summarize(total_inquiries = sum(inquiries))
+
+# Display the frequency distribution
+print(frequency_distribution)
+
+```
+
+```{r}
+anova_model <- aov(inquiries ~ day * section, data = newspaper_ads)
+summary(anova_model)
+```
+
+
+```{r}
+pairwise_t_test_day <- pairwise.t.test(newspaper_ads$inquiries, newspaper_ads$day, p.adjust.method = "bonferroni")
+pairwise_t_test_section <- pairwise.t.test(newspaper_ads$inquiries, newspaper_ads$section, p.adjust.method = "bonferroni")
+
+# Display t-test results
+print(pairwise_t_test_day)
+print(pairwise_t_test_section)
+```
+
+```{r}
+m1 <- aov(inquiries ~ factor(day) * factor(section), data = newspaper_ads)
+summary(m1)
+
+TukeyHSD(m1)
+```
 
