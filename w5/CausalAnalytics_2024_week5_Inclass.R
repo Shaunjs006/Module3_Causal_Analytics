@@ -228,7 +228,7 @@ bptest(iv.fit)  # Homoscedastic
 ######################################################################################################################################################################
 
 ## load data
-vietnam.df <- read.csv("Vietnam_earnings.csv")
+vietnam.df <- read.csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/w5/Vietnam_earnings.csv")
 
 ## check data
 head(vietnam.df)
@@ -256,7 +256,7 @@ hist(log(vietnam.df$earnings))
 
 ## a) Naive estimate
 naive.fit.vietnam <- lm(log(earnings)~served +factor(year)+factor(birthyear)+ white, data=vietnam.df)
-summary(naive.fit.vietnam)  # -0.006826  ns
+summary(naive.fit.vietnam)  # -0.006826  not significant
 
 ## b) IV regression - 2SLS 
 # instrument strength

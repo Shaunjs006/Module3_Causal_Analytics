@@ -1,0 +1,16 @@
+---
+title: "CA w5"
+author: "Sennan Cai"
+date: "2024-06-27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readr)
+ak91 <- read_csv("~/Desktop/Causal Analytics/Module3_Causal_Analytics/w5/ak91.csv")
+```
+
